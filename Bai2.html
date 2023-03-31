@@ -6,27 +6,29 @@
 </head>
 <body>
 <script>
-  // Viết hàm deleteNumberFromArray() nhận vào một mảng các số nguyên và một số nguyên vị trí index.
-  //         Hàm trả về mảng ban đầu nếu vị trí index có giá trị nhỏ hơn 0 hoặc lớn hơn chiều dài mảng.
-  //         Nếu không thì trả về mảng mới đã được xóa phần tử ở vị trí index.
+    // Viết hàm deleteNumberFromArray() nhận vào một mảng các số nguyên và một số nguyên vị trí index.
+    //         Hàm trả về mảng ban đầu nếu vị trí index có giá trị nhỏ hơn 0 hoặc lớn hơn chiều dài mảng.
+    //         Nếu không thì trả về mảng mới đã được xóa phần tử ở vị trí index.
 
 
-  let arr1 = [1, 4, 8, 4, 3, 2, 7, 6, 5, 8, 3, 2, 7, 8, 7, 6, 4, 5, 8, 9, 4, 5, 6, 8]
-  let index1 = 3
-  function deleteNumberFromArray(arr, index) {
-    let nArr = []
-    if (index < 0 && index > arr.length){
-      return arr
-    }else {
-      for (let i = 0; i < arr.length; i++) {
-        if (i !== index){
-          nArr.push(arr[i])
+    let arr1 = [1, 4, 8, 4, 3, 2, 7, 6, 5, 8, 3, 2, 7, 8, 7, 6, 4, 5, 8, 9, 4, 5, 6, 8]
+    let index1 = 3
+
+    function deleteNumberFromArray(arr, index) {
+        let nArr = []
+        if (index < 0 && index > arr.length) {
+            return arr
+        } else {
+            for (let i = 0; i < arr.length; i++) {
+                if (i !== index) {
+                    nArr.push(arr[i])
+                }
+            }
         }
-      }
+        return nArr
     }
-    return nArr
-  }
-  console.log(deleteNumberFromArray(arr1,index1))
+
+    console.log(deleteNumberFromArray(arr1, index1))
 </script>
 </body>
 </html>
